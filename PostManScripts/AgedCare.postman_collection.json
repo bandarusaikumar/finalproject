@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AgedCare",
+		"_postman_id": "d3539b7d-2da7-ca26-e6fc-8217e3dd2872",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreatePatient",
+			"request": {
+				"url": "http://localhost:8080/v1/patients",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"dppskPatient\",\n\t\"password\": \"test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CreateDoctor",
+			"request": {
+				"url": "http://localhost:8080/v1/doctors",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"dppskDoctor\",\n\t\"info\": \"test\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "LinkPatientDoctor",
+			"request": {
+				"url": "http://localhost:8080/v1/admin/link",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"doctorName\": \"dppskDoctor\",\n\t\"patientName\": \"dppskPatient\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateInfo",
+			"request": {
+				"url": "http://localhost:8080/v1/doctors/dppskPatient/updateinfo",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetInfo",
+			"request": {
+				"url": "http://localhost:8080/v1/patients/dppskPatient/getInfo",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
